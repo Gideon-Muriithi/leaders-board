@@ -1,4 +1,29 @@
 <resources>
     <string name="app_name">LEADERBOARD</string>
     <string name="todo">TODO</string>
+    <string name="submit">Submit</string>
+    <string name="skill_iq_leaders">Skill IQ Leaders</string>
+    <string name="learning_leaders">Learning Leaders</string>
+    <string name="hours_country">hours_country</string>
+    <string name="learning_leader_name">learning_leader_name</string>
+    <string name="scores_country">scores_country</string>
+    <string name="skill_leader_name">skill_leader_name</string>
+    <string-array name="languages">
+        <item>TEST</item>
+        <item>LET</item>
+        <item>TEST</item>
+        <item>LET</item>
+        <item>TEST</item>
+        <item>Eat</item>
+        <item>Rice</item>
+    </string-array>
+
+    <string-array name="nicknames">
+        <item>Cheza</item>
+        <item>Kama</item>
+        <item>Wewe</item>
+        <item>Ili</item>
+        <item>Tukujue</item>
+        <item>Please</item>
+    </string-array>
 </resources>

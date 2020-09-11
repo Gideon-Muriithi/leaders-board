@@ -5,9 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.leaderboard.R;
@@ -37,8 +39,10 @@ public class learning_skill_IQ_leaders extends AppCompatActivity implements View
     TextView mLearningLeaders;
     @BindView(R.id.skill_iq_leaders)
     TextView mSkillIq;
+    @BindView(R.id.submit_project_button)
+    Button mButton;
 
-   final static Retrofit RETROFIT = new Retrofit.Builder().baseUrl("https://gadsapi.herokuapp.com/api/")
+    final static Retrofit RETROFIT = new Retrofit.Builder().baseUrl("https://gadsapi.herokuapp.com/api/")
             .addConverterFactory(GsonConverterFactory.create()).build();
 
 
@@ -52,6 +56,7 @@ public class learning_skill_IQ_leaders extends AppCompatActivity implements View
         mLearningLeaders.setOnClickListener(this);
         mSkillIq.setOnClickListener(this);
         onClick(mLearningLeaders);
+        mButton.setOnClickListener(this);
 
 
     }
@@ -74,9 +79,7 @@ public class learning_skill_IQ_leaders extends AppCompatActivity implements View
                         mRecyclerView.setAdapter(adapter);
                         mRecyclerView.setLayoutManager(new LinearLayoutManager(learning_skill_IQ_leaders.this));
                         mRecyclerView.setHasFixedSize(true);
-                    }
-
-                    else {
+                    } else {
                         mLearningLeaders.setText("Code: " + response.code());
                     }
 
@@ -98,16 +101,14 @@ public class learning_skill_IQ_leaders extends AppCompatActivity implements View
                 @SuppressLint("SetTextI18n")
                 @Override
                 public void onResponse(Call<List<SkillIQ>> call, Response<List<SkillIQ>> response) {
-                    if(response.isSuccessful()) {
+                    if (response.isSuccessful()) {
                         List<SkillIQ> skills = response.body();
 
                         SkillIqLeaders adapter = new SkillIqLeaders(getApplicationContext(), skills);
                         mRecyclerView.setAdapter(adapter);
                         mRecyclerView.setLayoutManager(new LinearLayoutManager(learning_skill_IQ_leaders.this));
                         mRecyclerView.setHasFixedSize(true);
-                    }
-
-                    else {
+                    } else {
                         mLearningLeaders.setText("Code: " + response.code());
                     }
 
@@ -118,6 +119,11 @@ public class learning_skill_IQ_leaders extends AppCompatActivity implements View
                     mLearningLeaders.setText(t.getMessage());
                 }
             });
+        }
+
+        if (view == mButton) {
+            Intent intent = new Intent(this, ProjectSubmission.class);
+            startActivity(intent);
         }
 
     }

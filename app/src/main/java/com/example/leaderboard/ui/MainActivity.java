@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if(view == launcher) {
+        if (view == launcher) {
             Intent intent = new Intent(this, learning_skill_IQ_leaders.class);
             startActivity(intent);
         }

@@ -1,10 +1,10 @@
 package com.example.leaderboard.models;
 
 public class SkillIQ {
-    String name;
-    int score;
-    String country;
-    String badgeUrl;
+    private String name;
+    private int score;
+    private String country;
+    private String badgeUrl;
 
     public String getName() {
         return name;

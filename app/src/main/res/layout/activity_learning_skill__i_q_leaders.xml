@@ -8,13 +8,14 @@
     tools:context=".ui.learning_skill_IQ_leaders">
 
   <androidx.appcompat.widget.Toolbar
-      android:id="@+id/toolbar"
+      android:id="@+id/project_submit_toolbar"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:background="@android:color/black"
       app:layout_constraintBottom_toTopOf="@+id/recyclerView"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="1.0"
+      android:elevation="4dp"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent">
 
@@ -90,12 +91,11 @@
       android:id="@+id/recyclerView"
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_marginTop="16dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+      app:layout_constraintTop_toBottomOf="@+id/project_submit_toolbar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

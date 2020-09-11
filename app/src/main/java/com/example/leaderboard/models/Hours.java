@@ -1,10 +1,10 @@
 package com.example.leaderboard.models;
 
 public class Hours {
-    String name;
-    int hours;
-    String country;
-    String badgeUrl;
+    private String name;
+    private int hours;
+    private String country;
+    private String badgeUrl;
 
     public String getName() {
         return name;

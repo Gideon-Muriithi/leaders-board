@@ -24,6 +24,9 @@ SDK is not available at the moment. To run the app locally follow the following 
 # Technologies used
 Java, Android Studio
 
+# Screebshots Url
+https://user-images.githubusercontent.com/52457529/92857878-fe7b7280-f3fd-11ea-9dea-e73f1d50b62c.png
+
 # Support and contact details
 For any comments, reviews or advice contact me on gideongakenge@gmail.com.
 
